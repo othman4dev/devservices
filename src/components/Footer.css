@@ -129,8 +129,18 @@
   }
 
   .footer-content {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+  }
+
+  .footer-section {
+    min-width: 150px;
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  .footer-section:first-child {
+    flex: 1 1 100%;
   }
 
   .footer-bottom {
@@ -141,5 +151,14 @@
 
   .footer-legal {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    min-width: 120px;
+    flex: 1 1 100%;
   }
 }

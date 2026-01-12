@@ -209,15 +209,16 @@
 }
 
 .mobile-menu-toggle.open span:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .mobile-menu-toggle.open span:nth-child(2) {
   opacity: 0;
+  transform: translateX(-20px);
 }
 
 .mobile-menu-toggle.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 @media (max-width: 968px) {
@@ -244,6 +245,7 @@
     transition: right 0.3s ease;
     border-left: 1px solid rgba(99, 102, 241, 0.2);
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
   }
 
   .nav.mobile-open {
