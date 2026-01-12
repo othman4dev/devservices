@@ -1,0 +1,45 @@
+{
+  "branding": {
+    "name": "RealDev Services",
+    "tagline": "Building Digital Excellence"
+  },
+  "colors": {
+    "primary": "#6366f1",
+    "primaryDark": "#4f46e5",
+    "primaryLight": "#818cf8",
+    "secondary": "#8b5cf6",
+    "secondaryDark": "#7c3aed",
+    "accent": "#8b5cf6",
+    "accentDark": "#7c3aed",
+    "accentLight": "#a78bfa",
+    "background": "#0f172a",
+    "backgroundLight": "#1e2040",
+    "backgroundCard": "#1e2040",
+    "text": "#f1f5f9",
+    "textSecondary": "#cbd5e1",
+    "textMuted": "#94a3b8",
+    "success": "#10b981",
+    "warning": "#f59e0b",
+    "error": "#ef4444"
+  },
+  "gradients": {
+    "primary": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
+    "secondary": "linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)",
+    "hero": "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #312e81 100%)"
+  },
+  "shadows": {
+    "small": "0 2px 4px rgba(0, 0, 0, 0.1)",
+    "medium": "0 4px 6px rgba(0, 0, 0, 0.1)",
+    "large": "0 10px 25px rgba(0, 0, 0, 0.2)",
+    "glow": "0 0 20px rgba(139, 92, 246, 0.1)"
+  },
+  "contact": {
+    "email": "realdevs.business@outlook.com",
+    "phone": "+212658934855",
+    "whatsapp": "+212658934855"
+  },
+  "checkout": {
+    "link": "https://checkout.yoursite.com/payment",
+    "buttonText": "Start Your Project"
+  }
+}

@@ -1,0 +1,53 @@
+:root {
+  /* Default theme colors - will be overridden by theme.json */
+  --color-primary: #6366f1;
+  --color-primaryDark: #4f46e5;
+  --color-primaryLight: #818cf8;
+  --color-secondary: #8b5cf6;
+  --color-secondaryDark: #7c3aed;
+  --color-accent: #8b5cf6;
+  --color-accentDark: #7c3aed;
+  --color-accentLight: #a78bfa;
+  --color-background: #0f172a;
+  --color-backgroundLight: #1e293b;
+  --color-backgroundCard: #1e293b;
+  --color-text: #f1f5f9;
+  --color-textSecondary: #cbd5e1;
+  --color-textMuted: #94a3b8;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* Shadows */
+  --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 10px 25px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.1);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e293b 50%,
+    #312e81 100%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-background);
+  color: var(--color-text);
+  overflow-x: hidden;
+}

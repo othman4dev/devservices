@@ -1,0 +1,354 @@
+/* Thank You Page - Fixed Layout */
+.thankyou {
+  background: var(--gradient-hero);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.thankyou-container {
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.thankyou-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Success Icon */
+.success-icon-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.success-icon {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  font-size: 5rem;
+  color: white;
+  animation: success-pop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 0 50px rgba(139, 92, 246, 0.5), 0 0 100px rgba(139, 92, 246, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes success-pop {
+  0% {
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.15) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Particles */
+.success-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  animation: particle-float 2.5s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.7);
+}
+
+.particle:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  top: 20%;
+  right: 20%;
+  animation-delay: 0.4s;
+}
+
+.particle:nth-child(3) {
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 0.8s;
+}
+
+.particle:nth-child(4) {
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 1.2s;
+}
+
+@keyframes particle-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-25px) scale(1.3);
+    opacity: 1;
+  }
+}
+
+/* Title */
+.thankyou-title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.thankyou-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-textSecondary);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact Section */
+.contact-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.contact-subheading {
+  font-size: 0.95rem;
+  color: var(--color-textMuted);
+  margin-bottom: 2rem;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  border: 2px solid;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-btn i {
+  font-size: 2rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.btn-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+  z-index: 1;
+}
+
+.btn-title {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.btn-badge {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  opacity: 0.9;
+  font-weight: 700;
+  display: block;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: #25d366;
+  border-color: #25d366;
+  color: white;
+}
+
+.whatsapp-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-btn:hover::before {
+  opacity: 1;
+}
+
+/* Email Button */
+.email-btn {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.email-btn:hover {
+  background: var(--color-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 12px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--color-textSecondary);
+  font-size: 0.9rem;
+}
+
+.detail-item i {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .thankyou {
+    padding: 1.5rem;
+  }
+
+  .thankyou-card {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .success-icon {
+    width: 110px;
+    height: 110px;
+    font-size: 4rem;
+  }
+
+  .thankyou-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .thankyou-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-heading {
+    font-size: 1.25rem;
+  }
+
+  .contact-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-btn {
+    padding: 1.15rem 1.25rem;
+  }
+
+  .contact-btn i {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thankyou-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .success-icon {
+    width: 90px;
+    height: 90px;
+    font-size: 3.5rem;
+  }
+
+  .thankyou-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-heading {
+    font-size: 1.15rem;
+  }
+
+  .btn-title {
+    font-size: 0.9rem;
+  }
+
+  .detail-item {
+    font-size: 0.85rem;
+  }
+}

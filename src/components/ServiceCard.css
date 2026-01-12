@@ -1,0 +1,97 @@
+.service-card {
+  background: var(--color-backgroundCard);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.service-card:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.service-card:hover {
+  box-shadow: 0 0 0 2px var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  color: var(--color-accent);
+  transition: color 0.15s ease;
+}
+
+.service-title {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  color: var(--color-textSecondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.service-feature {
+  color: var(--color-textMuted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-dot {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+.service-button {
+  padding: 0.8rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  width: 100%;
+  border-radius: 40px;
+  border: 2px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-accent);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.service-button:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 3px 0px 0px var(--color-accent);
+}
+
+.service-button:active {
+  transform: translateY(0);
+}
